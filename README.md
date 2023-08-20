@@ -76,7 +76,7 @@ homework/
 2. `BoardService`에서 제목 키워드를 기반으로 페이지 번호와 크기를 사용하여 게시글을 검색합니다.
 3. 검색된 게시글 목록과 페이징 정보를 응답으로 프론트엔드에게 보냅니다.
 
-## 빌드 및 실행
+## 빌드
 
 1. 파일의 압축을 풀어줍니다.
 
@@ -92,6 +92,47 @@ server.port=8080
 4. 프로젝트를 IntelliJ IDEA에서 열고 실행합니다.
 
 5. Postman에서 `http://localhost:8080`에 접속하여 프로젝트를 확인합니다.
+
+## 실행
+### 게시글 저장 API
+[POST] http://localhost:8080/boards/register
+```
+{
+"name" : "mail plug에 오신걸 환영합니다.",
+"content" : "mail plug에 오신걸 환영합니다.",
+"category" : "공지사항"
+}
+```
+
+### 게시글 목록 조회 API
+- 기본값으로 page 0, size 10 <br/>
+
+[GET] http://localhost:8080/boards/list
+
+[GET] http://localhost:8080/boards/list?page=0&size=8
+
+### 게시글 단건 조회 API
+[GET] http://localhost:8080/boards/detail/1
+
+### 게시글 수정 API
+[PUT] http://localhost:8080/boards/1
+```
+{
+"name" : "mail plug에 오신걸 환영해요~",
+"content" : "만나서 반가워요 ~",
+"category" : "공지사항"
+}
+```
+
+### 게시글 삭제 API
+[DELETE] http://localhost:8080/boards/1
+
+### 게시글 제목 검색 API
+- 기본값으로 page 0, size 10 <br/>
+
+[GET] http://localhost:8080/boards/search?name=mail
+
+[GET] http://localhost:8080/boards/search?name=mail&page=0&size=8
 
 
 
