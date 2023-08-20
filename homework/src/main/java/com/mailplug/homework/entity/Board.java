@@ -1,11 +1,11 @@
-package com.mailplug.homework.domain.entity;
+package com.mailplug.homework.entity;
 
 import lombok.*;
 import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @Entity
 @Table(name = "board")
 public class Board {
