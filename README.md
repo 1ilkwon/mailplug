@@ -2,7 +2,7 @@
 
 ## 프로젝트 구조
 ```
-mailplug/
+homework/
 │
 ├── src/
 │   ├── main/
