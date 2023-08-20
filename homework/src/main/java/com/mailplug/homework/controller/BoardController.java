@@ -15,9 +15,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RequestMapping("/boards")
 @RequiredArgsConstructor
@@ -28,12 +26,10 @@ public class BoardController {
     @GetMapping("/list")
     public ResponseEntity<ResponseMessage> postListGet(@RequestParam(defaultValue = "0") int page,
                                                             @RequestParam(defaultValue = "10") int size) {
-
         try {
             Pageable pageable = PageRequest.of(page, size);
             Page<Board> boardPage = boardService.getPaginatedBoardList(pageable);
             List<Board> boardList = boardPage.getContent();
-
             ResponseMessage responseMessage = new ResponseMessage(HttpStatus.OK.value(), "Board list retrieved successfully.", boardList, boardPage.getNumber(),
                     boardPage.getTotalElements(), boardPage.getTotalPages());
 
@@ -54,7 +50,6 @@ public class BoardController {
                 return ResponseEntity.ok().body(new ResponseMessage(HttpStatus.OK.value(), "Board details retrieved successfully.", board));
             }
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ResponseMessage(HttpStatus.NOT_FOUND.value(), "Board is not exist", null));
-
         } catch (Exception e) {
             return ResponseEntity.internalServerError().body(new ResponseMessage(HttpStatus.INTERNAL_SERVER_ERROR.value(), "An error occurred: " + e.getMessage(), null));
         }
@@ -63,7 +58,6 @@ public class BoardController {
     @PostMapping("/register")
     @ResponseBody
     public ResponseEntity<ResponseMessage> registerPost(@RequestBody Board board, @RequestHeader(value = "X-USERID") String username){
-        Map<String, String> response = new HashMap<>();
         Date nowDate = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd");
         String date = simpleDateFormat.format(nowDate);
@@ -123,7 +117,6 @@ public class BoardController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ResponseMessage> deletePost(@PathVariable Long id, @RequestHeader(value = "X-USERID") String username) {
-        Map<String, Object> response = new HashMap<>();
 
         try {
             Board board = boardService.getBoardById(id);
@@ -149,22 +142,15 @@ public class BoardController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size
     ) {
-        Map<String, Object> response = new HashMap<>();
 
         try {
             Pageable pageable = PageRequest.of(page, size);
             Page<Board> boardPage = boardService.findByNamePaged(name, pageable);
-
             List<Board> boardList = boardPage.getContent();
-
             ResponseMessage responseMessage = new ResponseMessage(HttpStatus.OK.value(), "Search results retrieved successfully.", boardList, boardPage.getNumber(),
                     boardPage.getTotalElements(), boardPage.getTotalPages());
-
             return ResponseEntity.ok().body(responseMessage);
-
         } catch (Exception e) {
-            response.put("state", "false");
-            response.put("message", "An error occurred: " + e.getMessage());
             return ResponseEntity.internalServerError().body(new ResponseMessage(HttpStatus.INTERNAL_SERVER_ERROR.value(), "An error occurred: " + e.getMessage()));
         }
     }
