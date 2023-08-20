@@ -3,6 +3,37 @@
 ## 프로젝트 구조
 
 ![프로젝트 구조](https://github.com/1ilkwon/mailplug/blob/main/readmePicture/project_structer.png)
+mailplug/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   ├── mailplug.homework/
+│   │   │   │   │   ├── HomeworkApplication.java
+│   │   │   │   │   ├── domain/
+│   │   │   │   │   │   ├── ResponseMessage.java
+│   │   │   │   │   ├── controller/
+│   │   │   │   │   │   ├── BoardController.java
+│   │   │   │   │   ├── entity/
+│   │   │   │   │   │   ├── Board.java
+│   │   │   │   │   ├── repository/
+│   │   │   │   │   │   ├── BoardRepository.java
+│   │   │   │   │   ├── service/
+│   │   │   │   │   │   ├── BoardService.java
+│   │   │   │   │   ├── resources/
+│   │   │   │   │   │   ├── application.properties
+│   │   │   │   │   │   ├── static/
+│   │   │   │   │   │   ├── templates/
+│   ├── test/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   ├── mailplug.homework/
+│   │   │   │   │   ├── service/
+│   │   │   │   │   │   ├── BoardServiceTest.java
+│   │   │   │   ├── HomeworkApplicationTests.java
+
+
 
 ## 개발 환경
 
