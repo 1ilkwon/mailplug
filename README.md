@@ -2,36 +2,7 @@
 
 ## 프로젝트 구조
 
-mailplug/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com/
-│   │   │   │   ├── mailplug.homework/
-│   │   │   │   │   ├── HomeworkApplication.java
-│   │   │   │   │   ├── domain/
-│   │   │   │   │   │   ├── ResponseMessage.java
-│   │   │   │   │   ├── controller/
-│   │   │   │   │   │   ├── BoardController.java
-│   │   │   │   │   ├── entity/
-│   │   │   │   │   │   ├── Board.java
-│   │   │   │   │   ├── repository/
-│   │   │   │   │   │   ├── BoardRepository.java
-│   │   │   │   │   ├── service/
-│   │   │   │   │   │   ├── BoardService.java
-│   ├── resources/
-│   │   ├── application.properties
-│   │   ├── static/
-│   │   ├── templates/
-│   ├── test/
-│   │   ├── java/
-│   │   │   ├── com/
-│   │   │   │   ├── mailplug.homework/
-│   │   │   │   │   ├── service/
-│   │   │   │   │   │   ├── BoardServiceTest.java
-│   │   │   │   ├── HomeworkApplicationTests.java
-
+![이미지 설명](이미지 URL)
 
 ## 개발 환경
 
