@@ -3,37 +3,6 @@
 ## 프로젝트 구조
 
 ![프로젝트 구조](https://github.com/1ilkwon/mailplug/blob/main/readmePicture/project_structer.png)
-mailplug/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com/
-│   │   │   │   ├── mailplug.homework/
-│   │   │   │   │   ├── HomeworkApplication.java
-│   │   │   │   │   ├── domain/
-│   │   │   │   │   │   ├── ResponseMessage.java
-│   │   │   │   │   ├── controller/
-│   │   │   │   │   │   ├── BoardController.java
-│   │   │   │   │   ├── entity/
-│   │   │   │   │   │   ├── Board.java
-│   │   │   │   │   ├── repository/
-│   │   │   │   │   │   ├── BoardRepository.java
-│   │   │   │   │   ├── service/
-│   │   │   │   │   │   ├── BoardService.java
-│   │   │   │   │   ├── resources/
-│   │   │   │   │   │   ├── application.properties
-│   │   │   │   │   │   ├── static/
-│   │   │   │   │   │   ├── templates/
-│   ├── test/
-│   │   ├── java/
-│   │   │   ├── com/
-│   │   │   │   ├── mailplug.homework/
-│   │   │   │   │   ├── service/
-│   │   │   │   │   │   ├── BoardServiceTest.java
-│   │   │   │   ├── HomeworkApplicationTests.java
-
-
 
 ## 개발 환경
 
@@ -87,10 +56,6 @@ mailplug/
 3. `application.properties` 파일을 열고 데이터베이스 설정과 포트번호를 변경합니다.
 ![application.properties 설정](https://github.com/1ilkwon/mailplug/blob/main/readmePicture/setting.png)
 
-spring.datasource.url=jdbc:mysql://localhost:3306/your-database-name
-spring.datasource.username=your-username
-spring.datasource.password=your-password
-server.port=8080
 
 4. 프로젝트를 IntelliJ IDEA에서 열고 실행합니다.
 
