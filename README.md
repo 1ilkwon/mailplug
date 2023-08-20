@@ -2,7 +2,7 @@
 
 ## 프로젝트 구조
 
-![이미지 설명](이미지 URL)
+![프로젝트 구조](https://github.com/1ilkwon/mailplug/blob/main/readmePicture/project_structer.png)
 
 ## 개발 환경
 
