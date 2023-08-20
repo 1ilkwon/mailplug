@@ -20,10 +20,10 @@ mailplug/
 │   │   │   │   │   │   ├── BoardRepository.java
 │   │   │   │   │   ├── service/
 │   │   │   │   │   │   ├── BoardService.java
-│   │   ├── resources/
-│   │   │   ├── application.properties
-│   │   │   ├── static/
-│   │   │   ├── templates/
+│   ├── resources/
+│   │   ├── application.properties
+│   │   ├── static/
+│   │   ├── templates/
 │   ├── test/
 │   │   ├── java/
 │   │   │   ├── com/
